@@ -1,17 +1,14 @@
-# Workflow to automatically deploy mkdocs website when changes are pushed to main
-name: mkdocs-action
+name: Deploy
 on:
   push:
     branches:
-      - main  # the workflow will run when you push changes to the main branch
-  workflow_dispatch:  # you can also manually trigger the workflow for a different branch
-permissions:
-  contents: write
+      - main
 jobs:
-  deploy:
-    runs-on: ubuntu-latest  # the action runs on a virtual ubuntu machine
+  build:
+    name: Deploy docs to GitHub Pages
+    runs-on: ubuntu-latest
     steps:
-- name: Checkout 
+      - name: Checkout 
         uses: actions/checkout@v2
       - name: Build
         uses: Tiryoh/actions-mkdocs@v0
