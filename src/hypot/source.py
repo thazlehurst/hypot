@@ -14,7 +14,7 @@ def hypot(a, b):
         b (float): the other side of the triangle
 
     Returns:
-        float: the hypotenuse of the triangle
+        output (float): the hypotenuse of the triangle
     """
     return sqrt(a**2 + b**2)
 
@@ -27,6 +27,6 @@ def sqrt(a):
         a (float): Input value
 
     Returns:
-        float: square root of absolute of input value
+        output (float): square root of absolute of input value
     """
     return abs(a) ** 0.5
