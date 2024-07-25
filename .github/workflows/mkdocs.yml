@@ -23,7 +23,6 @@ jobs:
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
       - run: pip install \  # install any required mkdocs packages or plugins
               mkdocs-material \
               mkdocs  # you will have to add additional packages if you pip installed any extra features
